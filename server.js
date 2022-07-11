@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2022-07-11 09:04:23
  * @LastEditors: wangyunbo
- * @LastEditTime: 2022-07-11 15:55:32
+ * @LastEditTime: 2022-07-11 16:52:18
  * @FilePath: \node-docker\server.js
  * @Description: file content
  */
@@ -18,6 +18,6 @@ database.connect(process.env.CONNECTIONSTRING)
 server.use('/', mocks.server(server.Router(), false, false))
 
 server.use('/foo', (req, res) => {
-  return res.json({"foo": "bar>github->docker"})
+  return res.json({"foo": "bar>github"})
 })
 server.start();
