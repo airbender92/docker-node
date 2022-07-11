@@ -2,7 +2,7 @@
  * @Author: wangyunbo
  * @Date: 2022-07-11 09:04:23
  * @LastEditors: wangyunbo
- * @LastEditTime: 2022-07-11 14:51:52
+ * @LastEditTime: 2022-07-11 15:49:24
  * @FilePath: \node-docker\server.js
  * @Description: file content
  */
@@ -16,7 +16,7 @@ const server = ronin.server();
 database.connect(process.env.CONNECTIONSTRING)
 
 server.use('/foo', (req, res) => {
-  return res.json({"foo": "bar"})
+  return res.json({"foo": "bar>github->docker"})
 })
 
 server.use('/', mocks.server(server.Router(), false, false))
